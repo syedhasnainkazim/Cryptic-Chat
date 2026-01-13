@@ -1,4 +1,3 @@
-#Cryptic Chat
 🔐 CrypticChat
 
 Secure, real-time encrypted messaging web application
