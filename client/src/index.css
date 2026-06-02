@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* ── LIGHT THEME OVERRIDES ──────────────────────────────────────
+   Targets hardcoded Tailwind arbitrary-value classes so we don't
+   have to touch individual component files.
+   ─────────────────────────────────────────────────────────────── */
+[data-theme="light"] body,
+[data-theme="light"] #root {
+  background: #f5f5fd;
+  color: #1a1a2e;
+  color-scheme: light;
+}
+
+/* Backgrounds */
+[data-theme="light"] .bg-\[\#0d0d14\] { background-color: #f5f5fd !important; }
+[data-theme="light"] .bg-\[\#0f0f1a\] { background-color: #ededf9 !important; }
+[data-theme="light"] .bg-\[\#1a1a28\] { background-color: #e4e4f4 !important; }
+[data-theme="light"] .bg-\[\#1a1a2a\] { background-color: #e4e4f4 !important; }
+[data-theme="light"] .bg-\[\#13131e\] { background-color: #ffffff !important; }
+[data-theme="light"] .bg-\[\#1e1e2e\] { background-color: #e0e0f2 !important; }
+[data-theme="light"] .bg-\[\#2a2a3e\] { background-color: #d0d0e8 !important; }
+[data-theme="light"] .bg-\[\#14141f\] { background-color: #eeeeff !important; }
+[data-theme="light"] .bg-\[\#10101a\] { background-color: #ffffff !important; }
+[data-theme="light"] .bg-\[\#0d0d18\] { background-color: #f0f0ff !important; }
+[data-theme="light"] .bg-\[\#252538\] { background-color: #d8d8ee !important; }
+[data-theme="light"] .bg-\[\#0a0a14\] { background-color: #f8f8ff !important; }
+[data-theme="light"] .bg-black\/60 { background-color: rgba(0,0,0,0.35) !important; }
+[data-theme="light"] .bg-black\/70 { background-color: rgba(0,0,0,0.35) !important; }
+
+/* Text colors — "white" elements become near-black; dark inputs/textareas stay readable */
+[data-theme="light"] .text-white { color: #0f0f1e !important; }
+[data-theme="light"] input.text-white,
+[data-theme="light"] textarea.text-white { color: #1a1a2e !important; }
+[data-theme="light"] .text-\[\#e2e2f0\] { color: #2a2a44 !important; }
+[data-theme="light"] .text-\[\#c0c0e0\] { color: #383860 !important; }
+[data-theme="light"] .text-\[\#b0b0cc\] { color: #4a4a70 !important; }
+[data-theme="light"] .text-\[\#9090b0\] { color: #555577 !important; }
+[data-theme="light"] .text-\[\#7070a0\] { color: #606090 !important; }
+[data-theme="light"] .text-\[\#555570\] { color: #7070a8 !important; }
+[data-theme="light"] .text-\[\#555575\] { color: #7070a8 !important; }
+[data-theme="light"] .text-\[\#444460\] { color: #8888b0 !important; }
+[data-theme="light"] .text-\[\#333355\] { color: #9a9ac8 !important; }
+[data-theme="light"] .text-\[\#6060a0\] { color: #6060a0 !important; }
+[data-theme="light"] .text-\[\#8888aa\] { color: #6868a8 !important; }
+[data-theme="light"] .text-\[\#44445a\] { color: #7a7aaa !important; }
+[data-theme="light"] .text-\[\#40404a\] { color: #7a7aaa !important; }
+[data-theme="light"] .text-\[\#3a3a52\] { color: #8080b4 !important; }
+[data-theme="light"] .text-\[\#666680\] { color: #7070a8 !important; }
+[data-theme="light"] .text-\[\#666688\] { color: #7070a8 !important; }
+
+/* Borders */
+[data-theme="light"] .border-\[\#1e1e2e\] { border-color: #d0d0e8 !important; }
+[data-theme="light"] .border-\[\#1e1e30\] { border-color: #d0d0e8 !important; }
+[data-theme="light"] .border-\[\#2a2a3e\] { border-color: #c4c4de !important; }
+[data-theme="light"] .border-\[\#2a2a42\] { border-color: #c4c4de !important; }
+[data-theme="light"] .border-\[\#252538\] { border-color: #ccccec !important; }
+[data-theme="light"] .border-\[\#1a1a28\] { border-color: #d8d8f0 !important; }
+[data-theme="light"] .border-\[\#1a1a30\] { border-color: #d8d8f0 !important; }
+
+/* Hover states */
+[data-theme="light"] .hover\:bg-\[\#1e1e2e\]:hover { background-color: #dadaf0 !important; }
+[data-theme="light"] .hover\:bg-\[\#2a2a3e\]:hover { background-color: #d0d0e8 !important; }
+[data-theme="light"] .hover\:bg-\[\#1a1a28\]:hover { background-color: #e0e0f4 !important; }
+
+/* Placeholders */
+[data-theme="light"] .placeholder-\[\#444460\]::placeholder { color: #9898c0 !important; }
+[data-theme="light"] .placeholder-\[\#44445a\]::placeholder { color: #9898c0 !important; }
+[data-theme="light"] .placeholder-\[\#555570\]::placeholder { color: #9898c0 !important; }
+[data-theme="light"] .placeholder-\[\#3a3a52\]::placeholder { color: #9898c0 !important; }
+
+/* Message bubble (incoming) */
+[data-theme="light"] .msg-bubble-them {
+  background: #e4e4f4;
+  color: #1a1a2e;
+}
+
+/* Autofill */
+[data-theme="light"] input:-webkit-autofill,
+[data-theme="light"] input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #eeeeff inset !important;
+  -webkit-text-fill-color: #1a1a2e !important;
+}
+
+/* Scrollbar in light mode */
+[data-theme="light"] ::-webkit-scrollbar-thumb { background: #c0c0dc; }
+
+/* Selection */
+[data-theme="light"] ::selection { background: rgba(124,58,237,0.2); }
+
+/* All custom base rules go inside @layer base so Tailwind utilities can override them */
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #0d0d14;
+    color: #e2e2f0;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #root { display: flex; flex-direction: column; }
+
+  ::-webkit-scrollbar { width: 3px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #2e2e42; border-radius: 9999px; }
+  ::selection { background: rgba(124,58,237,0.3); }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px #1a1a28 inset !important;
+    -webkit-text-fill-color: #e2e2f0 !important;
+  }
+}
+
+/* Component classes (not utilities, so safe to leave unlayered) */
+.glass {
+  background: rgba(20, 20, 32, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.msg-bubble-me {
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+}
+
+.msg-bubble-them {
+  background: #1e1e2e;
+}
+
+.typing-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #8888aa;
+  animation: typing-bounce 1.2s infinite;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+.fade-in-up {
+  animation: fadeInUp 0.2s ease-out;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes typing-bounce {
+  0%, 60%, 100% { transform: translateY(0); }
+  30%            { transform: translateY(-5px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(124,58,237,0.4); }
+  50%       { box-shadow: 0 0 0 8px rgba(124,58,237,0); }
+}
