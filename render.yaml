@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: crypticchat
+    env: node
+    plan: free
+    buildCommand: bash build.sh
+    startCommand: node server/src/index.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRE
+        value: 7d
+      - key: MONGODB_URI
+        sync: false
